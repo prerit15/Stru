@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config SYSTEM "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+<form-beans>
+ <form-bean name="searchForm" type="com.java.minihr.SearchForm"></form-bean>
+</form-beans>
+
+<global-forwards>
+<forward name="search" path="/search.jsp"></forward>
+</global-forwards>
+<action-mappings>
+<action path="/search" type="com.java.minihr.SearchAction"
+name="searchForm"
+scope="request"
+validate="true"
+input="/search.jsp"
+>
+
+</action>
+</action-mappings>
+
+<message-resources parameter="com.java.minihr.MessageResources"></message-resources>
+</struts-config>
